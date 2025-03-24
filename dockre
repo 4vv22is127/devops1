@@ -1,0 +1,5 @@
+FROM openjdk:21
+WORKDIR /app
+COPY demo.java src/docker/demo.java
+RUN javac -d classes src/docker/demo.java
+CMD ["java","-cp","classes","docker.demo"]
